@@ -36,7 +36,7 @@ function App() {
         <button onClick={
           handleSubmit
         }>Submit</button>
-        <p><b>Definition: </b>{definition}</p>
+        <h3>Definition: </h3><p>{definition}</p>
       </div>
    </>
   )
