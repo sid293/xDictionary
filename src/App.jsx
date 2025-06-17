@@ -35,7 +35,7 @@ function App() {
         <input value={search} onChange={(e)=>{setSearch(e.target.value)}} type="text" />
         <button onClick={
           handleSubmit
-        }>Submit</button>
+        }><p>Submit</p></button>
         <h3>Definition: </h3><p>{definition}</p>
       </div>
    </>
