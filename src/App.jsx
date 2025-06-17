@@ -17,13 +17,16 @@ function App() {
   )
 
   function handleSubmit(){
+    let found = false;
     for(let i=0;i<dictionary.length;i++){
+      // console.log("comparing: ",search.toLowerCase(), dictionary[i]["word"].toLowerCase())
       if(search.toLowerCase() === dictionary[i]["word"].toLowerCase()){
         // console.log("yes")
         setDefinition(dictionary[i]["meaning"])
+        found = true;
       }
     }
-    if(definition === ""){
+    if(!found){
       setDefinition("Word not found in the dictionary.")
     }
   }
@@ -35,7 +38,7 @@ function App() {
         <input value={search} onChange={(e)=>{setSearch(e.target.value)}} type="text" />
         <button onClick={
           handleSubmit
-        }><p>Submit</p></button>
+        }>Submit</button>
         <h3>Definition: </h3><p>{definition}</p>
       </div>
    </>
